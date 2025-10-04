@@ -1,0 +1,7 @@
+a2a-sdk==0.3.7
+agent-framework==1.0.0b251001
+azure-ai-agents==1.2.0b5
+azure-ai-projects==1.1.0b4
+azure-identity==1.25.0
+jsonref==1.1.0
+python-dotenv==1.1.1
