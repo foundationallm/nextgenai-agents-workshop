@@ -244,21 +244,17 @@ Run [agent-openapi-holidays.py](./agent-openapi-holidays.py) using the instructi
 
 ## Exercise 9: Create an agent (bing search) with AI Foundry
 
-This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
-
-To complete this exercise, follow these steps:
+This exercise will be presented as an interactive demo by the workshop instructor.
 
 ## Exercise 10: Create an agent (bing custom search) with AI Foundry
 
-This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+This exercise will be presented as an interactive demo by the workshop instructor.
 
 To complete this exercise, follow these steps:
 
 ## Exercise 11: Create an agent (bing custom search) with AI Foundry and Python
 
-This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
-
-Run [agent-tech-search.py](./agent-tech-search.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
+This exercise will be presented as an interactive demo by the workshop instructor.
 
 ## Exercise 12: Creating an agent with Fabric Data Agent in AI Foundry
 
@@ -266,8 +262,42 @@ This exercise is performed in the Azure AI Foundry portal. Before starting the e
 
 To complete this exercise, follow these steps:
 
+1. Create a new agent in the Azure AI Foundry portal and use the following text for the instructions (see the steps in the [Exercise 1: Create a simple agent (witty cat) in AI Foundry](#exercise-1-create-a-simple-agent-witty-cat-in-ai-foundry) section for reference):
+
+    ```txt
+    You are a helpful agent.
+    ```
+
+2. In the `Knowledge` section select `+ Add` and then select `Microsoft Fabric` from the list of available tools.
+
+3. In the `Choose an existing Microsoft Fabric connection` dialog, select the `Fabric-TestAgent01` connection and then select `Connect`.
+
+4. In the playground, submit the following prompt (referenced as user query in the playground):
+
+    ```txt
+    What is the latest closing price for MSFT?
+    ```
+
 ## Exercise 13: Create connected agents in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
 To complete this exercise, follow these steps:
+
+1. Create a new agent in the Azure AI Foundry portal and use the following text for the instructions (see the steps in the [Exercise 1: Create a simple agent (witty cat) in AI Foundry](#exercise-1-create-a-simple-agent-witty-cat-in-ai-foundry) section for reference):
+
+    ```txt
+    You are a helpful agent that can delegate tasks to other agents as needed.
+    ```
+
+2. In the `Connected agents` section select `+ Add` and then provide the following values in the `Adding a connected agent` dialog:
+
+   - **Agent**: Select the agent you created in the [Exercise 1: Create a simple agent (witty cat) in AI Foundry](#exercise-1-create-a-simple-agent-witty-cat-in-ai-foundry) section.
+   - **Alias**: `cat_agent`.
+   - **Detail the steps to activate the agent**: `An agent that takes the perspective of a cat observing humans performing daily activities`.
+
+3. In the playground, submit the following prompt (referenced as user query in the playground):
+
+    ```txt
+    Thru the eyes of a cat, how do you see us at this AI tech conference?
+    ```
