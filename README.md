@@ -276,6 +276,13 @@ To complete this exercise, follow these steps:
     What is the latest closing price for MSFT?
     ```
 
+>[!IMPORTANT]
+>If you receive an answer like this:
+>```
+>It seems I'm unable to retrieve the closing price for Microsoft (MSFT) at this moment. To get the most up-to-date stock prices, I recommend checking a financial news website (like Bloomberg or Yahoo Finance) or a stock trading app.
+>```
+>you need to activate your account in Microsoft Fabric. To do that, open a new browser tab and navigate to [https://fabric.microsoft.com](https://fabric.microsoft.com) and sign in with your Azure account credentials (the same you used to sign in to the Azure AI Foundry portal). If asked to configure additional security settings, please skip the multi-factor authentication (MFA) setup, as this is not supported in the workshop environment (see the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) section for more details). After signing in, you will be presented with the Microsoft Fabric welcome page. You can close the browser tab and return to the Azure AI Foundry portal. Now, if you submit the prompt again in the playground, you should get a valid answer.
+
 ## Exercise 13: Create connected agents in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
