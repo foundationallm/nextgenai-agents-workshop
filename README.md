@@ -250,8 +250,6 @@ This exercise will be presented as an interactive demo by the workshop instructo
 
 This exercise will be presented as an interactive demo by the workshop instructor.
 
-To complete this exercise, follow these steps:
-
 ## Exercise 11: Create an agent (bing custom search) with AI Foundry and Python
 
 This exercise will be presented as an interactive demo by the workshop instructor.
