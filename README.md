@@ -127,7 +127,7 @@ If you want to run the Python files in debug mode so you can understand in more 
 
 3. Select `CTRL+SHIFT+D` (or `CMD+SHIFT+D` on Mac) to open the command selector and type `Python Debugger: Python Debugger: Debug Python file` and select it. This will start the debugger and run the Python file in debug mode.
 
-## Exercise 1: Create a simple agent (witty cat) in AI Foundry ##
+## Exercise 1: Create a simple agent (witty cat) in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
@@ -159,73 +159,114 @@ To complete this exercise, follow these steps:
 
 4. Submit other prompts to see how the agent responds. Optionally, you can modify the `Instructions` property of the agent to see how it affects the responses.
 
-## Exercise 2: Create a simple agent (Fibonacci sequence) with Python and AI Foundry ##
+## Exercise 2: Create a simple agent (Fibonacci sequence) with Python and AI Foundry
 
 This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
 
-Run [first_agent.py](./first-agent.py).
+Run [first_agent.py](./first-agent.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
 
-## Exercise 3: Create an agent with Code Interpreter in AI Foundry ##
+## Exercise 3: Create an agent with Code Interpreter in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
 To complete this exercise, follow these steps:
 
-## Exercise 4: Create an agent with Code Interpreter with Python and AI Foundry ##
+1. Create a new agent in the Azure AI Foundry portal and use the following text for the instructions (see the steps in the [Exercise 1: Create a simple agent (witty cat) in AI Foundry](#exercise-1-create-a-simple-agent-witty-cat-in-ai-foundry) section for reference):
+
+    ```txt
+    You politely help with math questions.
+    ```
+
+2. In the `Actions` section select `+ Add` action and then select `Code interpreter` from the list of available tools.
+
+    ![Add action](./media/ex03-add-code-interpreter.png)
+
+3. Save the code interpreter action without adding any files.
+
+4. In the playground, submit the following prompt (referenced as user query in the playground):
+
+    ```txt
+    Use python code to compute the first 10 digits of the Gray code cycle.
+    ```
+
+    ![Code interpreter prompt](./media/ex03-run-code-tool.png)
+
+## Exercise 4: Create an agent with Code Interpreter with Python and AI Foundry
 
 This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
 
-Run [agent-code-interpreter.py](./agent-code-interpreter.py).
+Run [agent-code-interpreter.py](./agent-code-interpreter.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
 
-## Exercise 5: Create an agent with Azure REST API Specs MCP tool with Python and AI Foundry ##
-
-This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
-
-Run [agent-mcp.py](./agent-mcp.py).
-
-## Exercise 6: Create an agent with MS Learn MCP tool with Python and AI Foundry ##
+## Exercise 5: Create an agent with Azure REST API Specs MCP tool with Python and AI Foundry
 
 This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
 
-Run [agent-mcp-mslearn.py](./agent-mcp-mslearn.py).
+Run [agent-mcp.py](./agent-mcp.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
 
-## Exercise 7: Create an agent (weather) with OpenAPI tools in AI Foundry ##
+## Exercise 6: Create an agent with MS Learn MCP tool with Python and AI Foundry
+
+This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
+
+Run [agent-mcp-mslearn.py](./agent-mcp-mslearn.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
+
+## Exercise 7: Create an agent (weather) with OpenAPI tools in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
 To complete this exercise, follow these steps:
 
-## Exercise 8: Create an agent (holidays) with OpenAPI tool with Python and AI Foundry ##
+1. Create a new agent in the Azure AI Foundry portal and use the following text for the instructions (see the steps in the [Exercise 1: Create a simple agent (witty cat) in AI Foundry](#exercise-1-create-a-simple-agent-witty-cat-in-ai-foundry) section for reference):
+
+    ```txt
+    You are a helpful agent.
+    ```
+
+2. In the `Actions` section select `+ Add` action and then select `OpenAPI 3.0 specified tool` from the list of available tools. Enter the following values in the `Tool details` section and then select `Next` to advance:
+
+   - **Name**: `get_weather`.
+   - **Description**: `Retrieve weather information`.
+
+3. In the `Define schema` section, paste the contents of the [weather_openapi.json](./weather_openapi.json) and then select `Next` to advance.
+
+4. In the `Review` section select `Create tool` to create the tool.
+
+5. In the playground, submit the following prompt (referenced as user query in the playground):
+
+    ```txt
+    What's the weather in Orlando, Florida?
+    ```
+
+## Exercise 8: Create an agent (holidays) with OpenAPI tool with Python and AI Foundry
 
 This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
 
-Run [agent-openapi-holidays.py](./agent-openapi-holidays.py).
+Run [agent-openapi-holidays.py](./agent-openapi-holidays.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
 
-## Exercise 9: Create an agent (bing search) with AI Foundry ##
-
-This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
-
-To complete this exercise, follow these steps:
-
-## Exercise 10: Create an agent (bing custom search) with AI Foundry ##
+## Exercise 9: Create an agent (bing search) with AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
 To complete this exercise, follow these steps:
 
-## Exercise 11: Create an agent (bing custom search) with AI Foundry and Python ##
+## Exercise 10: Create an agent (bing custom search) with AI Foundry
+
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
+
+## Exercise 11: Create an agent (bing custom search) with AI Foundry and Python
 
 This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
 
-Run [agent-tech-search.py](./agent-tech-search.py).
+Run [agent-tech-search.py](./agent-tech-search.py) using the instructions from the [Running a Python file in the local environment (optional)](#running-a-python-file-in-the-local-environment-optional) section. Optionally, you can run the file in debug mode using the instructions from the [Debugging a Python file in the local environment (optional)](#debugging-a-python-file-in-the-local-environment-optional) section.
 
-## Exercise 12: Creating an agent with Fabric Data Agent in AI Foundry ##
+## Exercise 12: Creating an agent with Fabric Data Agent in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
 To complete this exercise, follow these steps:
 
-## Exercise 13: Create connected agents in AI Foundry ##
+## Exercise 13: Create connected agents in AI Foundry
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
