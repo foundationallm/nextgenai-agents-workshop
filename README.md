@@ -103,6 +103,30 @@ Once you have installed the prerequisites, follow these steps to set up your loc
 
 Before running any Python file in this repo, make sure you complete the steps in the [Set up your local environment (optional)](#set-up-your-local-environment-optional) section.
 
+To run a Python file in the local environment, follow these steps:
+
+1. In Visual Studio Code, open a terminal (View > Terminal) and make sure your Python virtual environment is activated. Also, make sure you are in the root directory of the repository (where `README.md` is located).
+
+2. Run the Python file by using the following command:
+
+    ```pwsh
+    python <file_name>.py
+    ```
+
+    Make sure to replace `<file_name>` with the actual name of the Python file you want to run (e.g., `first_agent.py`).
+
+### Debugging a Python file in the local environment (optional)
+
+Before debugging any Python file in this repo, make sure you complete the steps in the [Set up your local environment (optional)](#set-up-your-local-environment-optional) section.
+
+If you want to run the Python files in debug mode so you can understand in more detail how they work, you can do so by following these steps:
+
+1. In Visual Studio Code, open the Python file you want to debug.
+
+2. Set a breakpoint by clicking in the gutter to the left of the line number where you want to pause execution. The recommended line to set a breakpoint is the line that contains the `project_client = AIProjectClient(` method call.
+
+3. Select `CTRL+SHIFT+D` (or `CMD+SHIFT+D` on Mac) to open the command selector and type `Python Debugger: Python Debugger: Debug Python file` and select it. This will start the debugger and run the Python file in debug mode.
+
 ## Exercise 1: Create a simple agent (witty cat) in AI Foundry ##
 
 This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
