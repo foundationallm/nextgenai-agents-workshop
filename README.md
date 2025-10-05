@@ -14,7 +14,8 @@ This repository contains code samples and instructions to help you go through th
 
 2. Sign in with your Azure account credentials. The user name should be `fllm-labuser-NN@foundationallm.ai`, where `NN` is your assigned number during the workshop. The password will also be provided during the workshop.
 
-    [!IMPORTANT] You will be asked to provide additional settings to keep the account secure. Please make sure you skip the multi-factor authentication (MFA) setup, as this is not supported in the workshop environment.
+    >[!IMPORTANT]
+    You will be asked to provide additional settings to keep the account secure. Please make sure you skip the multi-factor authentication (MFA) setup, as this is not supported in the workshop environment.
 
     ![Keep your account secure](./media/ex00-keep-account-secure.png)
 
@@ -26,7 +27,8 @@ This repository contains code samples and instructions to help you go through th
 
     ![Select project](./media/ex00-select-project.png)
 
-    [!IMPORTANT] Your account has the required access only to the `project-NN` project. Please make sure you select the correct project, otherwise you will see multiple permissions errors and will not be able to complete the exercises.
+    >[!IMPORTANT]
+    Your account has the required access only to the `project-NN` project. Please make sure you select the correct project, otherwise you will see multiple permissions errors and will not be able to complete the exercises.
 
 4. After selecting the project, you are ready to start using Azure AI Foundry.
 
