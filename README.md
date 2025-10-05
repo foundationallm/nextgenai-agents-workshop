@@ -75,9 +75,65 @@ Once you have installed the prerequisites, follow these steps to set up your loc
         pip install -r requirements.txt
         ```
 
+3. Configure the environment variables required to run the code samples. You can do this by creating a `.env` file in the root of the repository (next to `README.md`) and adding the following lines to it:
+   
+    ```txt
+    PROJECT_ENDPOINT=<project_endpoint>
+    MODEL_DEPLOYMENT_NAME=gpt-4o
+    ```
+
+    Make sure to replace `<project_endpoint>` with the actual project endpoint URL. You can find the project endpoint URL in the Azure AI Foundry portal by selecting `Overview` in the left-hand menu and then copying the value under `Azure AI Foundry project endpoint`:
+
+    ![Project endpoint](./media/ex00-aifoundry-project-endpoint.png)
+
+4. Log in to your Azure account using the Azure CLI by running the following command in the terminal:
+
+    ```pwsh
+    az login
+    ```
+
+    This will open a popup where you must select the `Work or school account` option and then sign in with your Azure account credentials. Make sure to use the same account you used to sign in to the Azure AI Foundry portal.
+
+>[!IMPORTANT]
+>You will be asked to provide additional settings to keep the >account secure. Please make sure you skip the multi-factor >authentication (MFA) setup, as this is not supported in the >workshop environment (see the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) section for more details).
+
+5. If you are prompted to select a subscription, make sure to select the subscription named `FoundationaLLM Demos` with the subscription ID `d2602cd1-e330-4e81-8edf-712f8a2f4130`.
+
+### Running a Python file in the local environment (optional)
+
+Before running any Python file in this repo, make sure you complete the steps in the [Set up your local environment (optional)](#set-up-your-local-environment-optional) section.
+
 ## Exercise 1: Create a simple agent (witty cat) in AI Foundry ##
 
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
 
+To complete this exercise, follow these steps:
+
+1. In the left-hand menu, select `Agents`. If prompted, select the `gpt-4o` model deployment to use with the agents.
+
+    ![Select model deployment](./media/ex01-select-model-deployment.png)
+
+2. Select `+ New agent` to create a new agent.
+
+    ![New agent](./media/ex01-new-agent.png)
+
+    The new agent will be created with a default name and will be displayed in the list of agents. Select `Try in playground` to open the agent in the playground.
+
+3. In the playground, add the following text to the `Instructions` property of the agent:
+
+   ```txt
+   You are a witty and funny agent that takes the perspective of a cat observing humans performing daily activities. You are both OCD and critical about what you see the humans doing, and you are more than happy to share your opinion on that. 
+   ```
+
+   and then submit the following prompt (referenced as user query in the playground):
+
+   ```txt
+   We are all attending a conference for AI software development. What do you think about that?
+    ```
+
+    ![Agent instructions and prompt](./media/ex01-first-prompt.png)
+
+4. Submit other prompts to see how the agent responds. Optionally, you can modify the `Instructions` property of the agent to see how it affects the responses.
 
 ## Exercise 2: Create a simple agent (Fibonacci sequence) with Python and AI Foundry ##
 
@@ -86,6 +142,10 @@ This exercise is a code-only exercise. Before starting the exercise, please make
 Run [first_agent.py](./first-agent.py).
 
 ## Exercise 3: Create an agent with Code Interpreter in AI Foundry ##
+
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
 
 ## Exercise 4: Create an agent with Code Interpreter with Python and AI Foundry ##
 
@@ -107,6 +167,10 @@ Run [agent-mcp-mslearn.py](./agent-mcp-mslearn.py).
 
 ## Exercise 7: Create an agent (weather) with OpenAPI tools in AI Foundry ##
 
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
+
 ## Exercise 8: Create an agent (holidays) with OpenAPI tool with Python and AI Foundry ##
 
 This exercise is a code-only exercise. Before starting the exercise, please make sure you have completed the [Prerequisites](#prerequisites) section (including the optional [Setup your local environment](#set-up-your-local-environment-optional)).
@@ -115,7 +179,15 @@ Run [agent-openapi-holidays.py](./agent-openapi-holidays.py).
 
 ## Exercise 9: Create an agent (bing search) with AI Foundry ##
 
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
+
 ## Exercise 10: Create an agent (bing custom search) with AI Foundry ##
+
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
 
 ## Exercise 11: Create an agent (bing custom search) with AI Foundry and Python ##
 
@@ -125,4 +197,12 @@ Run [agent-tech-search.py](./agent-tech-search.py).
 
 ## Exercise 12: Creating an agent with Fabric Data Agent in AI Foundry ##
 
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
+
 ## Exercise 13: Create connected agents in AI Foundry ##
+
+This exercise is performed in the Azure AI Foundry portal. Before starting the exercise, please make sure you have completed the [Sign into the Azure AI Foundry portal](#sign-into-the-azure-ai-foundry-portal) instructions from the [Prerequisites](#prerequisites) section. The instructions assume you are already signed into the Azure AI Foundry portal and have selected your project.
+
+To complete this exercise, follow these steps:
